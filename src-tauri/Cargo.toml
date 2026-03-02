@@ -1,0 +1,28 @@
+[package]
+name = "hyperion"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2.0.0", features = [] }
+tauri-plugin-shell = "2.0.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+warp = "0.3"
+aes-gcm = "0.10"
+sha2 = "0.10"
+machine-uid = "0.3"
+zeroize = "1.7"
+# МОДУЛИ ДЛЯ ХАБА И СЕТИ:
+reqwest = { version = "0.11", features = ["cookies", "json"] }
+suppaftp = "5.2"
+regex = "1.10"
+# ОБЯЗАТЕЛЬНО ДОБАВИТЬ ЭТИ ДВА ДЛЯ БАЗЫ И ГЕО:
+sled = "0.34"
+urlencoding = "2.1"
